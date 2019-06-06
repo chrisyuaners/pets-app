@@ -1,0 +1,10 @@
+<h1><%=@pet.name%>'s Page</h1>
+
+Name: <%=@pet.name%>
+<br>
+Category: <%=@pet.category%>
+<br>
+Owner: <%=link_to @pet.owner.to_full, owner_path(@pet.owner.id)%>
+
+<%=button_to "Update Pet", edit_pet_path(@pet.id), method: "get"%>
+<%=button_to "Delete Pet", @pet, method: "delete"%>

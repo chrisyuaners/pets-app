@@ -1,0 +1,19 @@
+<h1><%=@owner.first_name%>'s Page</h1>
+
+Full name: <%=@owner.to_full%>
+<br>
+Age: <%=@owner.age%>
+<br>
+Email: <%=@owner.email%>
+<br>
+Pets:
+<%@owner.pets.each do |pet|%>
+<ul>
+  <li>
+    <%=link_to pet.name, pet_path(pet.id)%>
+  </li>
+</ul>
+<%end%>
+
+<%=button_to "Update Owner", edit_owner_path(@owner.id), method: "get"%>
+<%=button_to "Delete Owner", @owner, method: "delete"%>
