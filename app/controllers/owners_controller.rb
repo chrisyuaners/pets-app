@@ -32,6 +32,10 @@ class OwnersController < ApplicationController
     redirect_to owners_path
   end
 
+  def many
+    @owners = Owner.all.select{|owner| owner.pets.count >= 2}
+  end
+
   private
 
   def owner_params

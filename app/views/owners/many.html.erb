@@ -1,0 +1,8 @@
+<h1>Owners w/ 2 or more Pets</h1>
+<ul>
+  <%@owners.each do |owner|%>
+  <li>
+    <%=link_to owner.to_full, owner_path(owner.id)%>
+  </li>
+  <%end%>
+</ul>

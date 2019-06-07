@@ -1709,3 +1709,412 @@ Processing by PetsController#show as HTML
 Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/pets" for ::1 at 2019-06-06 17:36:01 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 162ms (Views: 150.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-06-06 17:38:56 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (4.7ms)
+  Rendered /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-06 20:19:29 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 155ms (Views: 145.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 20:19:43 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners/1" for ::1 at 2019-06-06 20:19:54 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:7
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/views/owners/show.html.erb:10
+  Rendered owners/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 36ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/2" for ::1 at 2019-06-06 20:20:03 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/show.html.erb:7
+  Rendered pets/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-06 20:20:15 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2019-06-06 20:20:16 -0400
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/pets/new.html.erb:9
+  Rendered pets/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners/new" for ::1 at 2019-06-06 20:20:31 -0400
+Processing by OwnersController#new as HTML
+  Rendering owners/new.html.erb within layouts/application
+  Rendered owners/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/owners" for ::1 at 2019-06-06 20:20:41 -0400
+Processing by OwnersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGr41BNMGxeq1nIJk0m1z+tH6L6wXZeVv5gFWuKRcr1Ox2yK9BGSW0UagZFnOtsWAhf00cg+vOxqF0KdlLtQkA==", "owner"=>{"first_name"=>"Jun", "last_name"=>"Takeda", "age"=>"24", "email"=>"jun@gmail.com"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:15
+  [1m[36mOwner Create (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "age", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jun"], ["last_name", "Takeda"], ["age", 24], ["email", "jun@gmail.com"], ["created_at", "2019-06-07 00:20:41.833131"], ["updated_at", "2019-06-07 00:20:41.833131"]]
+  ↳ app/controllers/owners_controller.rb:15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:15
+Redirected to http://localhost:3000/owners/7
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/owners/7" for ::1 at 2019-06-06 20:20:41 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:7
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 7]]
+  ↳ app/views/owners/show.html.erb:10
+  Rendered owners/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 20:20:46 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-06 20:20:47 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pets/new" for ::1 at 2019-06-06 20:20:49 -0400
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/pets/new.html.erb:9
+  Rendered pets/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/pets" for ::1 at 2019-06-06 20:20:57 -0400
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gz+f/X8h8XyAxdi78MEjDG9thdJvYUMqWocDmnE+QOxdkgujmHx4MG8JKyMEsk3Vhj2ZvRcCaFOPCERdBxRiwQ==", "pet"=>{"name"=>"Simon", "category"=>"dog", "owner_id"=>"7"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:16
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:16
+  [1m[36mPet Create (0.6ms)[0m  [1m[32mINSERT INTO "pets" ("name", "category", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simon"], ["category", "dog"], ["owner_id", 7], ["created_at", "2019-06-07 00:20:57.072696"], ["updated_at", "2019-06-07 00:20:57.072696"]]
+  ↳ app/controllers/pets_controller.rb:16
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:16
+Redirected to http://localhost:3000/pets/9
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/pets/9" for ::1 at 2019-06-06 20:20:57 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pets/show.html.erb:7
+  Rendered pets/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/9/edit" for ::1 at 2019-06-06 20:21:08 -0400
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22
+  Rendering pets/edit.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/pets/edit.html.erb:9
+  Rendered pets/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pets/9" for ::1 at 2019-06-06 20:21:11 -0400
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y4WoPPfd0JwlGbrvd7AM4SI31mnop67N1GzdoW5Mv8aNKDxiEIBZ0MrVSXeDw2I4y2fKBpDEhbQB45pmGGad6w==", "pet"=>{"name"=>"Maddie", "category"=>"dog", "owner_id"=>"7"}, "commit"=>"Submit", "id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:27
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:27
+  [1m[36mPet Update (0.4ms)[0m  [1m[33mUPDATE "pets" SET "name" = ?, "updated_at" = ? WHERE "pets"."id" = ?[0m  [["name", "Maddie"], ["updated_at", "2019-06-07 00:21:11.224558"], ["id", 9]]
+  ↳ app/controllers/pets_controller.rb:27
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:27
+Redirected to http://localhost:3000/pets/9
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/pets/9" for ::1 at 2019-06-06 20:21:11 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pets/show.html.erb:7
+  Rendered pets/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-06 20:21:15 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-06 21:22:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christopheryuan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 158ms (Views: 147.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:22:24 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:30:17 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners/many" for ::1 at 2019-06-06 21:40:15 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"many"}
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:7
+Completed 404 Not Found in 7ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Owner with 'id'=many):
+  
+app/controllers/owners_controller.rb:7:in `show'
+Started GET "/owners/many" for ::1 at 2019-06-06 21:43:58 -0400
+Processing by OwnersController#many as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Call `select' with at least one field):
+  
+app/controllers/owners_controller.rb:36:in `many'
+Started GET "/owners" for ::1 at 2019-06-06 21:45:28 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/owners/many" for ::1 at 2019-06-06 21:45:29 -0400
+Processing by OwnersController#many as HTML
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 2]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 3]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 4]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 5]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 7]]
+  ↳ app/controllers/owners_controller.rb:36
+  Rendering owners/many.html.erb within layouts/application
+  Rendered owners/many.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:46:40 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners/many" for ::1 at 2019-06-06 21:46:41 -0400
+Processing by OwnersController#many as HTML
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 2]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 3]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 4]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 5]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 7]]
+  ↳ app/controllers/owners_controller.rb:36
+  Rendering owners/many.html.erb within layouts/application
+  Rendered owners/many.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:47:41 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/owners/many" for ::1 at 2019-06-06 21:47:42 -0400
+Processing by OwnersController#many as HTML
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 2]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 3]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 4]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 5]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 7]]
+  ↳ app/controllers/owners_controller.rb:36
+  Rendering owners/many.html.erb within layouts/application
+  Rendered owners/many.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:48:20 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/owners/many" for ::1 at 2019-06-06 21:48:21 -0400
+Processing by OwnersController#many as HTML
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 2]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 3]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 4]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 5]]
+  ↳ app/controllers/owners_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 7]]
+  ↳ app/controllers/owners_controller.rb:36
+  Rendering owners/many.html.erb within layouts/application
+  Rendered owners/many.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/owners/1" for ::1 at 2019-06-06 21:48:22 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:7
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = ?[0m  [["owner_id", 1]]
+  ↳ app/views/owners/show.html.erb:10
+  Rendered owners/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/owners" for ::1 at 2019-06-06 21:48:25 -0400
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
